@@ -1,9 +1,6 @@
 import ClassRoom from './0-classroom';
 
-/**
- * Author - Graham S. Paul
- * 1-make_classrooms.js
- */
 export default function initializeRooms() {
-  return [19, 20, 34].map((size) => new ClassRoom(size));
+  const obj = [new ClassRoom(19), new ClassRoom(20), new ClassRoom(34)];
+  return obj;
 }
