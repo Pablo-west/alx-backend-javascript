@@ -1,7 +1,4 @@
-/**
- * Author - Graham S. Paul
- * 3-currency.js
- */
+/* eslint no-underscore-dangle: ["error", {"allow": ["_name", "_code"] }] */
 export default class Currency {
   constructor(code, name) {
     this._code = code;
@@ -12,19 +9,19 @@ export default class Currency {
     return this._code;
   }
 
-  set code(value) {
-    this._code = value;
+  set code(sym) {
+    this._code = sym;
   }
 
   get name() {
     return this._name;
   }
 
-  set name(value) {
-    this._name = value;
+  set name(Name) {
+    this._name = Name;
   }
 
   displayFullCurrency() {
-    return `${this.name} (${this.code})`;
+    return `${this._name} (${this._code})`;
   }
 }
